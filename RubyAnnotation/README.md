@@ -5,6 +5,14 @@
 This extension adds the ability to parse Aozora Bunko format ruby syntax to Markdig's Markdown parser, 
 enabling the use of ruby annotations in Markdown.
 
+## NuGet Package
+
+https://www.nuget.org/packages/TsukuyoOka.MarkdigExtensions.RubyAnnotation/
+
+```powershell
+Install-Package TsukuyoOka.MarkdigExtensions.RubyAnnotation
+```
+
 ## What is ruby?
 
 Ruby is a short annotation that appears in small letters above or to the right of the text.
@@ -56,7 +64,7 @@ especially on novel submission sites such as [Shōsetsuka ni Narō (lang: ja)](h
 
 ### Kanji《ruby text》 Syntax
 
-In this syntax, the ruby text is written immediately after the base text, enclosed in double angle brackets `《`~(U+300A)~ `》`~(U+300B)~. 
+In this syntax, the ruby text is written immediately after the base text, enclosed in double angle brackets `《`<sub>(U+300A)</sub> `》`<sub>(U+300B)</sub>. 
 The base text is kanji characters immediately before the opening bracket.
 
 #### Examples
@@ -70,12 +78,12 @@ The base text is kanji characters immediately before the opening bracket.
 
 ### ｜Base text《ruby text》 Syntax
 
-In this syntax, a delimiter `｜`~(U+FF5C)~ is written at the beginning of the base text,
-and the ruby text is written immediately after the base text, enclosed in double angle brackets `《`~(U+300A)~ `》`~(U+300B)~.
+In this syntax, a delimiter `｜`<sub>(U+FF5C)</sub> is written at the beginning of the base text,
+and the ruby text is written immediately after the base text, enclosed in double angle brackets `《`<sub>(U+300A)</sub> `》`<sub>(U+300B)</sub>.
 
 The base text can contain both kanji and non-kanji characters.
 
-ASCII `|`~(U+007C)~ can be used instead of `｜`.
+ASCII `|`<sub>(U+007C)</sub> can be used instead of `｜`.
 
 #### Examples
 
@@ -88,10 +96,10 @@ ASCII `|`~(U+007C)~ can be used instead of `｜`.
 The original Aozora Bunko format uses non-ASCII full-width characters,
 but this extension also defines a syntax that allows writing in ASCII only.
 
-In this syntax, even if the base text is only kanji characters, the range must be indicated by `|`~(U+007C)~.
+In this syntax, even if the base text is only kanji characters, the range must be indicated by `|`<sub>(U+007C)</sub>.
 
-Although the syntax is defined for ASCII, not only ASCII `|`~(U+007C)~ `(`~(U+0028)~ `)`~(U+0029)~
-but also full-width `｜`~(U+FF5C)~ `（`~(U+FF08)~ `）`~(U+FF09)~ can be used.
+Although the syntax is defined for ASCII, not only ASCII `|`<sub>(U+007C)</sub> `(`<sub>(U+0028)</sub> `)`<sub>(U+0029)</sub>
+but also full-width `｜`<sub>(U+FF5C)</sub> `（`<sub>(U+FF08)</sub> `）`<sub>(U+FF09)</sub> can be used.
 
 #### Examples
 
@@ -101,8 +109,8 @@ but also full-width `｜`~(U+FF5C)~ `（`~(U+FF08)~ `）`~(U+FF09)~ can be used.
 
 ### Escape Syntax
 
-If you want to use as normal text instead of a ruby syntax, insert `｜`~(U+FF5C)~ or ASCII `|`~(U+007C)~ immediately before the opening bracket.
-Otherwise, the standard Markdown escape character using `\`~(U+005C)~ will also work.
+If you want to use as normal text instead of a ruby syntax, insert `｜`<sub>(U+FF5C)</sub> or ASCII `|`<sub>(U+007C)</sub> immediately before the opening bracket.
+Otherwise, the standard Markdown escape character using `\`<sub>(U+005C)</sub> will also work.
 
 #### Examples
 

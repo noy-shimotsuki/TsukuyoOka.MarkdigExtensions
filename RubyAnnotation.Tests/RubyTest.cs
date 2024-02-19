@@ -52,7 +52,6 @@ public class RubyTest
     [InlineData("한글《ハングル》", "<p>한글《ハングル》</p>\n")]
     [InlineData("漢字《かんじ", "<p>漢字《かんじ</p>\n")]
     [InlineData("漢字《かんじ\\》", "<p>漢字《かんじ》</p>\n")]
-    [InlineData("漢字《かんじ", "<p>漢字《かんじ</p>\n")]
     [InlineData("漢字《かんじ)", "<p>漢字《かんじ)</p>\n")]
     [InlineData("漢字（かんじ)", "<p>漢字（かんじ)</p>\n")]
     [InlineData("漢字（かんじ》", "<p>漢字（かんじ》</p>\n")]
